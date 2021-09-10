@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas example</title>
+</head>
+<body onload="pageLoaded()">
+    <canvas width="640" height="480" id="testcanvas" style="border: 1px solid black;">
+        Your browser does not support HTML5 Canvas. Please shift to a newer browser.
+    </canvas>
+<script type="text/javascript">
+    function pageLoaded() {
+        const canvas = document.getElementById("testcanvas");
+        const context = canvas.getContext("2d");
+    }
+</script>
+</body>
+</html>
