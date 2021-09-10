@@ -82,4 +82,9 @@ function pageLoaded() {
     context.drawImage(fireImage, 0, 400, 100, 25);
     // context.drawImage(fireImage, 0, 0, 60, 50, 0, 420, 60, 50);
 
+    const image = document.getElementById("spaceship");
+    context.drawImage(image, 0, 0, 70, 70, 300, 320, 100, 100);
+    context.translate(0, 10);
+    context.drawImage(image, 0, 0, 70, 70, 370, 320, 100, 100);
+
 }
