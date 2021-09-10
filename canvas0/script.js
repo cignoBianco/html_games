@@ -61,4 +61,25 @@ function pageLoaded() {
     context.font = "16pt ComicSans";
     context.strokeText("This is stroked in 16pt ComicSans...", 330, 80);
 
+
+    context.fillStyle = "red";
+    context.fillRect(310, 160, 100, 50);
+    context.strokeStyle = "green";
+    context.strokeRect(310, 240, 100, 50);
+
+    context.fillStyle = "rgb(255, 255, 0)";
+    context.fillRect(420, 160, 100, 50);
+    context.fillStyle = "rgba(0, 255, 0, 0.6)";
+    context.fillRect(450, 180, 100, 50);
+
+    let fireImage = document.getElementById("fire");
+    let pattern = context.createPattern(fireImage, "repeat");
+    context.fillStyle = pattern;
+    context.fillRect(420, 240, 130, 50);
+
+
+    // context.drawImage(fireImage, 0, 350);
+    context.drawImage(fireImage, 0, 400, 100, 25);
+    // context.drawImage(fireImage, 0, 0, 60, 50, 0, 420, 60, 50);
+
 }
