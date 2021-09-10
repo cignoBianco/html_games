@@ -13,6 +13,7 @@ function pageLoaded() {
     context.clearRect(260, 20, 30, 20);
     context.clearRect(210, 80, 80, 20);
 
+
     // Rectangle
     context.beginPath();
     context.moveTo(10, 120);
@@ -36,6 +37,7 @@ function pageLoaded() {
     context.closePath();
     context.stroke();
 
+
     context.beginPath();
     // Draw an arc at (400, 50) with radius 40 from 0 to 180 degrees, anticlockwise
     // PI radians = 180 degrees
@@ -49,5 +51,14 @@ function pageLoaded() {
     context.beginPath();
     context.arc(200, 300, 25, 0, 3 / 2 * Math.PI, false);
     context.stroke();
+
+
+    context.fillText("This is some text...", 330, 40);
+
+    context.font = "10pt Arial";
+    context.fillText("This is in 16pt Arial...", 330, 60);
+
+    context.font = "16pt ComicSans";
+    context.strokeText("This is stroked in 16pt ComicSans...", 330, 80);
 
 }
