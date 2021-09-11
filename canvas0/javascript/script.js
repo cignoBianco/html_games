@@ -87,4 +87,14 @@ function pageLoaded() {
     context.translate(0, 10);
     context.drawImage(image, 0, 0, 70, 70, 370, 320, 100, 100);
 
+    // First: (Load single sprite sheet image)
+
+    // Nine arguments: the element, source (x, y) coordinates,
+    // source width and height (for cropping),
+    // destination (x, y) coordinates, and
+    // destination width and height (resize)
+
+    // context.drawImage(this.spriteImage, this.imageWidth * (imageNumber), 0, this.imageWidth, this.imageHeight, x, y,
+    //     this.imageWidth, this.imageHeight);
+
 }
