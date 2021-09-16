@@ -82,6 +82,21 @@ const levels = {
     },
 
     load: function(number) {
+        // Declare a new currentLevel object
+        game.currentLevel = { number: number };
+        game.score = 0;
+
+        document.getElementById("score").innerHTML = "Score: " + game.score;
+        var level = levels.data[number];
+
+        // Load the background, foreground, and slingshot images
+        game.currentLevel.backgroundImage = loader.loadImage("images/backgrounds/" + level.background + ".png");
+        game.currentLevel.foregroundImage = loader.loadImage("images/backgrounds/" + level.foreground + ".png");
+        game.slingshotImage = loader.loadImage("images/slingshot.png");
+        game.slingshotFrontImage = loader.loadImage("images/slingshot-front.png");
+
+        // Call game.start() once the assets have loaded
+        loader.onload = game.start;
     },
 };
 
@@ -157,5 +172,7 @@ const loader = {
 
 window.addEventListener("load", function() {
     game.init();
+
+
 });
 
