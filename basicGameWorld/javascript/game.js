@@ -109,6 +109,7 @@ const loader = {
         const audio = document.createElement("audio");
         let mp3Support;
 
+        // TODO other formats
         if (audio.canPlayType) {
             mp3Support = "" !== audio.canPlayType("audio/mpeg");
         } else {
